@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="media_api.upload" class="Saro0h\MediaApiBundle\Media\MediaHandler">
+            <argument type="service" id="kernel" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument type="service" id="logger" />
+            <!--<argument>%media_path%</argument> Added in the extension class-->
+        </service>
+
+        <service id="media_api.post_serialize_media_listener" class="Saro0h\MediaApiBundle\EventListener\PostSerializeMediaListener">
+            <argument type="service" id="request_stack" />
+            <argument type="service" id="router" />
+            <tag name="jms_serializer.event_subscriber" type="Saro0h\MediaApiBundle\Entity\Media" direction="serialization" format="json"
+                method="onPostSerialize"/>
+        </service>
+    </services>
+</container>

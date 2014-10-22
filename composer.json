@@ -1,0 +1,27 @@
+{
+    "name": "saro0h/media-api-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "keywords": ["Upload Media Api Bundle"],
+    "description": "Api to upload files.",
+    "autoload": {
+        "psr-0": {
+            "Saro0h\\MediaApiBundle": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Sarah Khalil",
+            "email": "mkhalil.sarah@gmail.com"
+        }
+    ],
+    "target-dir": "Saro0h/MediaApiBundle",
+    "require": {
+        "php": ">=5.3.3",
+        "sensio/framework-extra-bundle": "~3.0",
+        "doctrine/orm": "~2.2,>=2.2.3",
+        "doctrine/doctrine-bundle": "~1.2",
+        "symfony/monolog-bundle": "~2.4",
+        "jms/serializer-bundle": "~0.13"
+    }
+}
