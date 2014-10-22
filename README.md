@@ -39,6 +39,7 @@ Enable the bundle in the kernel:
 ### Step 3: Import the routes of the bundle
 
 Add the following lines to the `app/config/routing.yml`:
+
     app:
         resource: "@MediaApiBundle/Controller/"
         type:     annotation
@@ -46,6 +47,7 @@ Add the following lines to the `app/config/routing.yml`:
 ### Step 4: Create the database and the schema
 
 Run the following commands (after configuring the ORM parameters)
+
     app/console doctrine:database:create
     app/console doctrine:schema:create
 
