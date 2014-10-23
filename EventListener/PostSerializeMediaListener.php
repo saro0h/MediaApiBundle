@@ -7,16 +7,13 @@ use JMS\Serializer\EventDispatcher\Events;
 use JMS\Serializer\EventDispatcher\EventSubscriberInterface;
 use Saro0h\MediaApiBundle\Entity\Media;
 use Symfony\Bundle\FrameworkBundle\Routing\Router;
-use Symfony\Component\HttpFoundation\RequestStack;
 
 class PostSerializeMediaListener implements EventSubscriberInterface
 {
     private $webPath;
-    private $request;
 
-    public function __construct(RequestStack $request, Router $router)
+    public function __construct(Router $router)
     {
-        $this->request = $request;
         $this->webPath = $router->getContext()->getScheme().'://'.$router->getContext()->getHost();
     }
 
