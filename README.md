@@ -1,6 +1,8 @@
 Saro0h\MediaApiBundle
 =====================
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/a8c693af-de52-455c-9626-247474c9fb2c/small.png)](https://insight.sensiolabs.com/projects/a8c693af-de52-455c-9626-247474c9fb2c)
+
 This bundle allows you to have an upload of files through an API.
 
 Installation

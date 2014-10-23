@@ -14,7 +14,7 @@ class PostSerializeMediaListener implements EventSubscriberInterface
 
     public function __construct(Router $router)
     {
-        $this->webPath = $router->getContext()->getScheme().'://'.$router->getContext()->getHost();
+        $this->webPath = $router->getContext()->getScheme().'://'.$router->getContext()->getHost().':'.$router->getContext()->getHttpPort();
     }
 
     public function onPostSerialize(ObjectEvent $event)
