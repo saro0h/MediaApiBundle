@@ -40,9 +40,8 @@ Enable the bundle in the kernel:
 
 Add the following lines to the `app/config/routing.yml`:
 
-    app:
-        resource: "@MediaApiBundle/Controller/"
-        type:     annotation
+    media_api_bundle:
+        resource: "@MediaApiBundle/Resources/config/routing.yml"
 
 ### Step 4: Create the database and the schema
 
@@ -64,10 +63,10 @@ Usage
 ### Upload a file
 
 If you did not configure the bundle, you just have to POST on the url `/api/upload` the field `media`with the file as showed below:
-![upload](https://cloud.githubusercontent.com/assets/667519/4745340/18373566-5a39-11e4-865a-44be6d793681.png)
+![upload](https://cloud.githubusercontent.com/assets/667519/4749236/18f0b73c-5a81-11e4-9c9d-f413b32359a5.png)
 
 If you can also choose the name of the file uploaded by supplying the field `filename`:
-![upload-with-filename](https://cloud.githubusercontent.com/assets/667519/4745345/2ab24c58-5a39-11e4-86a8-e6887768ab34.png)
+![upload-with-filename](https://cloud.githubusercontent.com/assets/667519/4749239/2231f2d4-5a81-11e4-8c16-d58b59613f7b.png)
 
 
 License

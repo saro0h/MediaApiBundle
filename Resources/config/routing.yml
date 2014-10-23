@@ -1,0 +1,4 @@
+upload:
+    path:     /media/api/upload
+    defaults: { _controller: MediaApiBundle:Upload:upload }
+    methods:  [POST]

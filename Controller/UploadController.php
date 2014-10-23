@@ -9,13 +9,9 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-class DefaultController extends Controller
+class UploadController extends Controller
 {
-    /**
-     * @Method("POST")
-     * @Route("/api/upload", name="upload")
-     */
-    public function indexAction(Request $request)
+    public function uploadAction(Request $request)
     {
         $file = $request->files->get($this->container->getParameter('media_api.field_name'));
         $filename = $request->get('filename');
