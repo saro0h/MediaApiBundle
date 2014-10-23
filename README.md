@@ -62,7 +62,7 @@ Usage
 
 ### Upload a file
 
-If you did not configure the bundle, you just have to POST on the url `/api/upload` the field `media`with the file as showed below:
+If you did not configure the bundle, you just have to POST on the url `/media/api/upload` the field `media`with the file as showed below:
 ![upload](https://cloud.githubusercontent.com/assets/667519/4749236/18f0b73c-5a81-11e4-9c9d-f413b32359a5.png)
 
 If you can also choose the name of the file uploaded by supplying the field `filename`:
