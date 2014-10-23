@@ -25,4 +25,32 @@ class UploadController extends Controller
 
         return $response;
     }
+
+    public function getAction(Request $request)
+    {
+        $media = $this->getDoctrine()->getRepository('MediaApiBundle:Media')->findOneById($request->get('id'));
+
+        if (is_null($media)) {
+             throw new HttpException(Response::HTTP_BAD_REQUEST, 'No media found.');
+        }
+
+        $response = new Response($this->get('jms_serializer')->serialize(array('media' => $media), 'json'));
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+    }
+
+    public function deleteAction(Request $request)
+    {
+        $media = $this->getDoctrine()->getRepository('MediaApiBundle:Media')->findOneById($request->get('id'));
+
+        if (is_null($media)) {
+             throw new HttpException(Response::HTTP_BAD_REQUEST, 'No media found.');
+        }
+
+        $this->getDoctrine()->getEntityManager()->remove($media);
+        $this->getDoctrine()->getEntityManager()->flush();
+
+        return new Response('', Response::HTTP_NO_CONTENT);
+    }
 }

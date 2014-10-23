@@ -62,13 +62,27 @@ Run the following commands (after configuring the ORM parameters)
 Usage
 -----
 
-### Upload a file
+#### Upload a file
+
+- POST /media
 
 If you did not configure the bundle, you just have to POST on the url `/media/api/upload` the field `media`with the file as showed below:
-![upload](https://cloud.githubusercontent.com/assets/667519/4749236/18f0b73c-5a81-11e4-9c9d-f413b32359a5.png)
+![upload](https://cloud.githubusercontent.com/assets/667519/4759203/b9dd106e-5ae5-11e4-8789-a98ab1100e2d.png)
 
 If you can also choose the name of the file uploaded by supplying the field `filename`:
-![upload-with-filename](https://cloud.githubusercontent.com/assets/667519/4749239/2231f2d4-5a81-11e4-8c16-d58b59613f7b.png)
+![upload_with_filename](https://cloud.githubusercontent.com/assets/667519/4759221/c5396f16-5ae5-11e4-96a6-ab01c1b9fa2e.png)
+
+#### Get a media
+
+- GET /media/api/{id}
+
+![get_media](https://cloud.githubusercontent.com/assets/667519/4759226/cc2bfd70-5ae5-11e4-9146-c16a90c33518.png)
+
+#### Delete a media
+
+- DELETE /media/api/get/{id}
+
+![delete_media](https://cloud.githubusercontent.com/assets/667519/4759230/d8f85aa8-5ae5-11e4-81c0-0ba2aff9dd11.png)
 
 
 License

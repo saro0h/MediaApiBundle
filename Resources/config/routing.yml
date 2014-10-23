@@ -1,4 +1,14 @@
-upload:
-    path:     /media/api/upload
+media_api_upload:
+    path:     /media
     defaults: { _controller: MediaApiBundle:Upload:upload }
     methods:  [POST]
+
+media_api_get:
+    path:     /media/{id}
+    defaults: { _controller: MediaApiBundle:Upload:get }
+    methods:  [GET]
+
+media_api_delete:
+    path:     /media/{id}
+    defaults: { _controller: MediaApiBundle:Upload:delete }
+    methods:  [DELETE]
